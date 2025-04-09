@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>restraunt Menu</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #37474f;
+      line-height: 1.6;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 42px;
+      margin-bottom: 40px;
+      font-weight: 700;
+      color: #ffffff;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+      letter-spacing: 2px;
+    }
+
+    .menu {
+      max-width: 750px;
+      margin: auto;
+      background-color: rgba(255, 255, 255, 0.92);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .dropdown {
+      margin-bottom: 25px;
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: #ffffff;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .dropdown-btn {
+      width: 100%;
+      padding: 18px 25px;
+      font-size: 20px;
+      background-color: #e17055;
+      color: white;
+      border: none;
+      text-align: left;
+      position: relative;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+    }
+
+    .dropdown-btn:hover {
+      background-color: #d35400;
+    }
+
+    .dropdown-btn::after {
+      content: '▼';
+      position: absolute;
+      right: 25px;
+      font-size: 16px;
+    }
+
+    .dropdown.open .dropdown-btn::after {
+      content: '▲';
+    }
+
+    .dropdown-content {
+      display: none;
+      background: #fafafa;
+      padding: 15px 25px 25px;
+      border-top: 1px solid #e0e0e0;
+    }
+
+    .dropdown.open .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content p {
+      margin: 12px 0;
+      font-size: 17px;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px dotted #ccc;
+      padding-bottom: 4px;
+      color: #455a64;
+    }
+
+    .item-desc {
+      font-size: 13px;
+      color: #7a7a7a;
+      margin-left: 10px;
+      margin-bottom: 8px;
+      font-style: italic;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    .dropdown-content {
+      animation: fadeIn 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 style="color: whitesmoke;">Soothing Restraunt Menu</h1>
+
+  <div class="menu">
+
+    <!-- Starters -->
+    <div class="dropdown">
+      <button class="dropdown-btn">Starters</button>
+      <div class="dropdown-content">
+        <p><span>Greek Salad</span><span>$5.00</span></p>
+        <p class="item-desc">Fresh greens and feta cheese</p>
+
+        <p><span>Tortilla Española</span><span>$4.50</span></p>
+        <p class="item-desc">Spanish-style omelette with potatoes</p>
+
+        <p><span>Olivas Rellenas</span><span>$6.00</span></p>
+        <p class="item-desc">Stuffed olives</p>
+
+        <p><span>Verduras con Olivada</span><span>$6.50</span></p>
+        <p class="item-desc">Vegetables with olive spread</p>
+
+        <p><span>Lasagne</span><span>$3.00</span></p>
+        <p class="item-desc">Classic cheesy Italian lasagna</p>
+      </div>
+    </div>
+
+    <!-- Mains -->
+    <div class="dropdown">
+      <button class="dropdown-btn">Mains</button>
+      <div class="dropdown-content">
+        <p><span>Lenguado</span><span>$12.00</span></p>
+        <p class="item-desc">Grilled sole fillet with sides</p>
+
+        <p><span>Bacalao Frito</span><span>$7.00</span></p>
+        <p class="item-desc">Fried cod with crispy crust</p>
+
+        <p><span>Paella Mixta</span><span>$8.50</span></p>
+        <p class="item-desc">Mixed seafood & meat paella</p>
+
+        <p><span>Pollo al Horno</span><span>$8.00</span></p>
+        <p class="item-desc">Baked chicken with herbs</p>
+
+        <p><span>Don de Salmón</span><span>$11.50</span></p>
+        <p class="item-desc">Salmon with lemon butter sauce</p>
+      </div>
+    </div>
+
+    <!-- Sides -->
+    <div class="dropdown">
+      <button class="dropdown-btn">Sides</button>
+      <div class="dropdown-content">
+        <p><span>Fries</span><span>$2.00</span></p>
+        <p><span>Pepper Potatoes</span><span>$7.00</span></p>
+        <p><span>Green Salad</span><span>$2.00</span></p>
+        <p><span>Coleslaw</span><span>$2.00</span></p>
+        <p><span>Jacket Potato</span><span>$2.00</span></p>
+        <p><span>Onion Rings</span><span>$3.00</span></p>
+        <p><span>Fried Beans</span><span>$2.00</span></p>
+      </div>
+    </div>
+
+    <!-- Desserts -->
+    <div class="dropdown">
+      <button class="dropdown-btn">Desserts</button>
+      <div class="dropdown-content">
+        <p><span>Banana Split</span><span>$9.00</span></p>
+        <p><span>Cherry Pie</span><span>$8.00</span></p>
+        <p><span>Cookie Dough</span><span>$7.00</span></p>
+        <p><span>Apple Pie</span><span>$8.00</span></p>
+        <p><span>Fruit Smoothie</span><span>$6.00</span></p>
+        <p><span>Chocolate Muffin</span><span>$5.00</span></p>
+      </div>
+    </div>
+
+    <!-- Drinks -->
+    <div class="dropdown">
+      <button class="dropdown-btn">Drinks</button>
+      <div class="dropdown-content">
+        <p><span>Soft Drinks</span><span>$1.75</span></p>
+        <p><span>Beer</span><span>$2.00</span></p>
+        <p><span>Wine (Glass)</span><span>$2.00</span></p>
+        <p><span>Beer Jug</span><span>$4.00</span></p>
+        <p><span>Bottled Water</span><span>$1.00</span></p>
+        <p><span>Fresh Juice</span><span>$1.75</span></p>
+        <p><span>Tea / Coffee</span><span>$1.50</span></p>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    document.querySelectorAll('.dropdown-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        button.parentElement.classList.toggle('open');
+      });
+    });
+  </script>
+
+</body>
+</html>
